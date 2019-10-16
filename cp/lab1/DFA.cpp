@@ -9,8 +9,8 @@
 #include<stack>
 using namespace std;
 char table[100][100];
-ifstream input;       //ÊäÈëÎÄ¼ş
-ofstream output;      //Êä³öÎÄ¼ş
+ifstream input;       //ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
+ofstream output;      //ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 int id = 0;
 
 struct Edge{
@@ -96,12 +96,12 @@ bool DFA::readFile(){
     int n = statesSet.size();
     vector<string> chain[n];
 
-    //1. °Ñ¶ÁÈëµÄÊı×ª»»Î» nÎ»µÄ bit Î»
+    //1. ï¿½Ñ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½Î» nÎ»ï¿½ï¿½ bit Î»
     for (int x = 0; x < n;x ++){
         int hexIn ,copyH ;
         input >> hex >> hexIn;
         copyH =hexIn;
-# define debug1
+// # define debug1
 #ifdef debug1
 cout << "___:\n";
 cout << "hex IN :" << hexIn << '\n';
@@ -126,10 +126,10 @@ cout << "hex IN :" << hexIn << '\n';
         }
 
         for(int i = 0;i < n;i ++){
-cout << (copyH&1) ;
+// cout << (copyH&1) ;
             if (copyH & 1 == 1){
 
-cout << s.top() ;
+// cout << s.top() ;
                 //chain[x].push_back(tempInput);
                 chain[x].insert(chain[x].begin(),s.top());
                 s.pop();
@@ -138,22 +138,22 @@ cout << s.top() ;
                 chain[x].insert(chain[x].begin(),"");
                 //chain[x].push_back("");
             }
-cout <<  ' ';
+// cout <<  ' ';
             copyH = copyH >> 1;
         }
 
-cout << '\n';
+// cout << '\n';
         for(int y = 0;y < n;y ++){
             if(chain[x][y] != ""){
                 int num = chain[x][y].length();
                 for(int i = 0;i < num;i ++){
-cout << x << " "<< indexTable[chain[x][y][i]] << ' ' << y << '\n';
+// cout << x << " "<< indexTable[chain[x][y][i]] << ' ' << y << '\n';
                     table[x+minState][indexTable[chain[x][y][i]]] = '0'+y + minState;
 
                 }
             }
         }
-cout << "----\n";
+// cout << "----\n";
     }
     return 1;
 
@@ -221,13 +221,13 @@ bool DFA::typeIn()
             break;
         if((statesSet.count(temp[0])==0)||(statesSet.count(temp[2])==0)||(charactersSet.count(temp[1])==0))
             return 0;
-        table[temp[0]-'0'][indexTable[temp[1]]]=temp[2];  //×´Ì¬±í
+        table[temp[0]-'0'][indexTable[temp[1]]]=temp[2];  //×´Ì¬ï¿½ï¿½
         tempT.push_back(temp);
     }
     return 1;
 }
 
-void DFA::feedback()     //´òÓ¡£¬²¢Ğ´ÈëÎÄ¼ş
+void DFA::feedback()     //ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½Ä¼ï¿½
 {
     printf("characters set\n");
     set<char>::iterator it = charactersSet.begin();

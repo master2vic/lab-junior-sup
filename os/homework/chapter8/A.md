@@ -47,6 +47,7 @@ python2 ./mlfq.py -j 3 -q 1 -n 1 -m 10 -M 0
 # 8.5
 
 ~~~shell
-python2 ./mlfq.py -j 10 -q 10 -B 2000 -m 300 -n 3
+python2 ./mlfq.py -j 10 -q 10 -B 200 -m 300 -n 3
 ~~~
 
+10  / 0.05 = 200
