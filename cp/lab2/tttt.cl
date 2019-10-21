@@ -1,0 +1,17 @@
+(*
+	fafhiuadsufihaisfhi***
+	rwe
+*)
+()()
+123
+int
+123j3
+nameIS_12w
+NameIS123_er_
+_123
+12_dsf_"sdf"
+<-
+<=
+<s
+sf=df
+sf/sf
