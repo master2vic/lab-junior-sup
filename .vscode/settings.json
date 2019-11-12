@@ -44,5 +44,8 @@
         "SCAN.C": "cpp",
         "UTIL.C": "cpp",
         "MAIN.C": "cpp"
-    }
+    },
+    "cSpell.words": [
+        "physmem"
+    ]
 }
