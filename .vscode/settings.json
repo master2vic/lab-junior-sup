@@ -46,6 +46,8 @@
         "MAIN.C": "cpp"
     },
     "cSpell.words": [
+        "ADDRSORT",
+        "malloc",
         "physmem"
     ]
 }
